@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="home"
+        android:icon="@drawable/home_icon"
+        android:iconTint="@color/white"
+        app:labelVisibilityMode="unlabeled"
+        android:id="@+id/nav_home"/>
+
+    <item android:title="home"
+        android:icon="@drawable/community_icon"
+        android:iconTint="@color/white"
+        app:labelVisibilityMode="unlabeled"
+        android:id="@+id/nav_community"/>
+    <item android:title="home"
+        android:icon="@drawable/add_post_icon"
+        android:iconTint="@color/white"
+        app:labelVisibilityMode="unlabeled"
+        android:id="@+id/nav_post"/>
+
+    <item android:title="home"
+        android:icon="@drawable/notification_icon"
+        android:iconTint="@color/white"
+        app:labelVisibilityMode="unlabeled"
+        android:id="@+id/nav_notifications"/>
+
+    <item android:title="home"
+        android:icon="@drawable/account_circle"
+        android:iconTint="@color/white"
+        app:labelVisibilityMode="unlabeled"
+        android:id="@+id/nav_profile"/>
+</menu>

@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CollegeConnected" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/background</item>
+        <item name="android:colorBackground">@color/background</item>
+    </style>
+
+<!--    <style name="BACKGROUND">-->
+<!--        <item name="background">#070F2B</item>-->
+<!--    </style>-->
+
+<!--    &lt;!&ndash; app button color&ndash;&gt;-->
+<!--    <style name="BUTTON">-->
+<!--        <item name="backgroundColor">#1B1A55</item>-->
+<!--    </style>-->
+
+<!--    &lt;!&ndash; app textH color&ndash;&gt;-->
+<!--    <style name="TEXTH">-->
+<!--        <item name="backgroundColor">#535C91</item>-->
+<!--    </style>-->
+
+<!--    &lt;!&ndash; app textP color&ndash;&gt;-->
+<!--    <style name="TEXTP">-->
+<!--        <item name="backgroundColor">#9290C3</item>-->
+<!--    </style>-->
+</resources>
