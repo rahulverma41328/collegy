@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/communityImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/account_circle" />
+
+        <TextView
+            android:id="@+id/communityUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/communityImage"
+            android:layout_marginStart="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:text="/@codingCommunity" />
+
+        <TextView
+            android:id="@+id/userUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/@username"
+            android:layout_toEndOf="@+id/communityUsername"
+            android:layout_marginStart="10dp"
+            android:textSize="12sp"
+            android:layout_centerVertical="true"
+            android:textColor="#5F5F5F" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/userPostImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        android:src="@drawable/demo_image" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/upVoteIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/up_vote"/>
+
+        <TextView
+            android:id="@+id/postUpVote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="231"
+            android:layout_toEndOf="@+id/upVoteIcon"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/commentIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/postUpVote"
+            android:src="@drawable/comment_icon"/>
+
+        <TextView
+            android:id="@+id/postComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="231"
+            android:layout_toEndOf="@+id/commentIcon"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/white"/>
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/postDescription"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:layout_marginStart="5dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/demoString"/>
+
+</LinearLayout>
