@@ -11,7 +11,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.collegeconnected.R
 import com.example.collegeconnected.databinding.ActivityDashboardBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class Dashboard : AppCompatActivity() {
 
     private lateinit var binding:ActivityDashboardBinding

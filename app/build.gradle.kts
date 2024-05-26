@@ -54,10 +54,14 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.firebase.auth.ktx)
-    implementation(libs.firebase.firestore.ktx)
+    implementation(libs.firebase.database.ktx)
+    implementation(libs.firebase.storage.ktx)
+    implementation(libs.google.firebase.firestore.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+   // implementation("com.google.firebase:firebase-bom:33.0.0")
 
     //circular image
     implementation ("de.hdodenhof:circleimageview:3.1.0")
@@ -94,4 +98,7 @@ dependencies {
 
     // bottom nav
     implementation ("com.github.ibrahimsn98:SmoothBottomBar:1.7.9")
+
+    // round corner image
+    implementation ("com.makeramen:roundedimageview:2.3.0")
 }

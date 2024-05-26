@@ -6,6 +6,7 @@ import com.example.collegeconnected.util.Constants.INTRODUCTION_SP
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.firestore
+import com.google.firebase.storage.storage
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,6 +24,11 @@ object AppModule {
     @Provides
     @Singleton
     fun provideFirebaseFirestoreDatabase() = Firebase.firestore
+
+    @Provides
+    @Singleton
+    fun provideFirebaseCloud() = Firebase.storage
+
 
     @Provides
     fun provideIntroductionSP(
