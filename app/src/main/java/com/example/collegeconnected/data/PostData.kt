@@ -3,7 +3,7 @@ package com.example.collegeconnected.data
 data class PostData(
     val postId:String,
     val postImg:String,
-    val postTitle:String,
+    val title:String,
     val communityName:String,
     val communityImage:String,
     val postUsername:String,

@@ -59,18 +59,20 @@ class AddPostFragment:Fragment(R.layout.fragment_add_post) {
             uploadPost.setOnClickListener {
                 val title:String = binding.postTitle.text.toString().trim()
                 val description:String = binding.postDescription.text.toString().trim()
-                val postImg:String = savePost()
 
-                val userPost = UserPost(
-                    UUID.randomUUID().toString(),
-                    title,
-                    description,
-                    postImg,
-                    "0",
-                    "0"
-                )
+                savePost { downloadUrl->
+                    val userPost = UserPost(
+                        UUID.randomUUID().toString(),
+                        title,
+                        description,
+                        downloadUrl,
+                        "0",
+                        "0"
+                    )
+                    viewModel.storeDataToFirebase(userPost)
+                }
 
-                viewModel.storeDataToFirebase(userPost)
+
             }
         }
 
@@ -92,8 +94,7 @@ class AddPostFragment:Fragment(R.layout.fragment_add_post) {
         }
     }
 
-    private fun savePost():String {
-        var postImg = ""
+    private fun savePost(callback:(String)->Unit) {
 
         lifecycleScope.launch(Dispatchers.IO) {
             try {
@@ -102,13 +103,12 @@ class AddPostFragment:Fragment(R.layout.fragment_add_post) {
                     val storageRef = storage.child("postImg/images/$id")
                     val result = storageRef.putFile(imageUri).await()
                     val downloadUrl = result.storage.downloadUrl.await().toString()
-                    postImg = downloadUrl
+                    callback(downloadUrl)
                 }.await()
             }catch (e:Exception){
                 e.printStackTrace()
             }
         }
-        return postImg
     }
 
     private fun openGallery() {

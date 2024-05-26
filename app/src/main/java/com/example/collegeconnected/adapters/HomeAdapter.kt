@@ -13,10 +13,12 @@ class HomeAdapter:RecyclerView.Adapter<HomeAdapter.HomeAdapterViewHolder>() {
     inner class HomeAdapterViewHolder(private val binding:PostCardBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(postData: PostData){
             binding.apply {
-                Glide.with(itemView).load(postData.communityImage).into(communityImage)
-                communityUsername.text = postData.communityName
-                userUsername.text = postData.postUsername
+              //  Glide.with(itemView).load(postData.communityImage).into(communityImage)
+             //   communityUsername.text = postData.communityName
+              //  userUsername.text = postData.postUsername
+
                 Glide.with(itemView).load(postData.postImg).into(userPostImage)
+                title.text = postData.title
                 postDescription.text = postData.postDescription
                 postUpVote.text = postData.postLike.toString()
                 postComment.text = postData.postComment.toString()
@@ -35,7 +37,7 @@ class HomeAdapter:RecyclerView.Adapter<HomeAdapter.HomeAdapterViewHolder>() {
 
     }
 
-    private val differ = AsyncListDiffer(this,diffCallback)
+    val differ = AsyncListDiffer(this,diffCallback)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapterViewHolder {
         return HomeAdapterViewHolder(
             PostCardBinding.inflate(
